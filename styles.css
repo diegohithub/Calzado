@@ -1,0 +1,174 @@
+/* Estilo base del cuerpo */
+body {
+    font-family: 'Futura', 'Times New Roman', Times, serif; /* Cambia a Futura, si está disponible */
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #000;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Mantiene el logo a la izquierda y el resto del contenido a la derecha */
+    background-color: #000;
+    padding: 10px 20px;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en múltiples líneas si es necesario */
+}
+
+/* Logo */
+.logo-container {
+    display: flex;
+    align-items: center; /* Alinea el logo verticalmente */
+}
+
+.logo {
+    width: 100px; /* Ajusta el tamaño a 100px de ancho */
+    height: 100px; /* Ajusta el tamaño a 100px de alto */
+}
+
+/* Título y Navegación */
+nav {
+    display: flex;
+    flex-direction: column; /* Alinea el título y la lista verticalmente */
+    align-items: center; /* Centra horizontalmente el contenido */
+    flex: 1; /* Permite que el nav ocupe el espacio disponible */
+}
+
+nav h1 {
+    color: white; /* Cambia el color del título */
+    font-size: 30px; /* Tamaño del título */
+    margin: 0; /* Sin margen para alinear mejor */
+    font-weight: bold; /* Aumenta el grosor de la fuente */
+}
+
+/* Contenedor de botones */
+.button-container {
+    background-color: #add8e6; /* Azul claro */
+    padding: 10px 20px; /* Espaciado alrededor de los botones */
+    border-radius: 5px; /* Esquinas redondeadas */
+}
+
+/* Navegación */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centra los enlaces */
+    margin-top: 10px; /* Espacio superior entre el título y los enlaces */
+    flex-wrap: wrap; /* Permite que los enlaces se ajusten en múltiples líneas */
+}
+
+nav ul li {
+    margin: 0 15px; /* Espaciado horizontal entre los enlaces */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px; /* Aumenta el tamaño de la fuente */
+    padding: 15px 30px; /* Mayor espaciado */
+    border-radius: 5px; /* Esquinas redondeadas para los botones */
+    transition: background-color 0.3s, transform 0.3s; /* Transición suave para el hover */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para relieve */
+    font-weight: bold; /* Aumenta el grosor de la fuente de los enlaces */
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Cambia el color de fondo al pasar el ratón */
+    transform: translateY(-2px); /* Efecto de elevación */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Efecto de sombra al pasar el ratón */
+}
+
+/* Productos */
+.productos {
+    padding: 20px;
+    text-align: center;
+}
+
+#search-bar {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Grid de productos */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adaptable a diferentes tamaños */
+    gap: 20px;
+}
+
+.producto {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    min-height: 250px; /* Añadido para consistencia de tamaño */
+}
+
+.producto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.whatsapp-btn {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.whatsapp-btn:hover {
+    background-color: #1ebe59;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra al pasar el ratón */
+}
+
+/* Footer */
+footer {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    nav h1 {
+        font-size: 24px; /* Tamaño más pequeño en pantallas pequeñas */
+    }
+
+    nav ul li a {
+        font-size: 20px; /* Tamaño más pequeño en pantallas pequeñas */
+    }
+
+    #search-bar {
+        width: 100%; /* Ocupa todo el ancho en pantallas pequeñas */
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Menos columnas en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    nav h1 {
+        font-size: 20px; /* Tamaño aún más pequeño */
+    }
+
+    nav ul li a {
+        font-size: 18px; /* Tamaño más pequeño en pantallas muy pequeñas */
+    }
+}
