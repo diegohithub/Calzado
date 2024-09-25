@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Tienda de Calzado</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <a href="calzado.html">
+            <img src="imagenes/logo.jpeg" alt="Logo de la Tienda" class="logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="calzado.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="ofertas.html">Ofertas</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="productos">
+        <h1>Nuestros Productos</h1>
+        <input type="text" id="search-bar" placeholder="Buscar producto por nombre..." onkeyup="buscarProducto()">
+        
+
+        <div class="grid-container">
+            <!-- Producto 1 -->
+            <div class="producto">
+                <img src="imagenes/rtro4.jpg" alt="Jordan Retro 4">
+                <h3 class="nombre-producto">Jordan Retro 4</h3>
+                <p class="descripcion-producto">Cómodo y moderno, ideal para correr.</p>
+                <span class="precio-producto">$100.000</span>
+                <a href="#" class="whatsapp-btn" onclick="enviarWhatsApp(this)">Comprar por WhatsApp</a>
+            </div>
+            <!-- Producto 2 -->
+            <div class="producto">
+                <img src="img/calzado2.jpg" alt="Calzado Casual">
+                <h3 class="nombre-producto">Calzado Casual</h3>
+                <p class="descripcion-producto"p>Descripcion: Ideal para uso diario, ligero y elegante.</p>
+                <span class="precio-producto">$80.000</span>
+                <a href="#" class="whatsapp-btn" onclick="enviarWhatsApp(this)">Comprar por WhatsApp</a>
+            </div>
+            <!-- Producto 3 -->
+            <div class="producto">
+                <img src="img/calzado3.jpg" alt="Calzado Formal">
+                <h3 class="nombre-producto">Calzado Formal</h3>
+                <p class="descripcion-producto">Perfecto para ocasiones formales y de trabajo.</p>
+                <span class="precio-producto">$120.000</span>
+                <a href="#" class="whatsapp-btn" onclick="enviarWhatsApp(this)">Comprar por WhatsApp</a>
+            </div>
+            <!-- Añade más productos aquí -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Tienda de Calzado. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
