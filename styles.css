@@ -43,43 +43,29 @@ nav h1 {
     font-weight: bold; /* Aumenta el grosor de la fuente */
 }
 
-/* Contenedor de botones */
-.button-container {
-    background-color: #add8e6; /* Azul claro */
-    padding: 10px 20px; /* Espaciado alrededor de los botones */
-    border-radius: 5px; /* Esquinas redondeadas */
-}
-
 /* Navegación */
 nav ul {
-    list-style: none;
-    margin: 0;
+    list-style-type: none; /* Sin viñetas */
     padding: 0;
-    display: flex;
+    margin: 0;
+    display: flex; /* Para alinear horizontalmente */
     justify-content: center; /* Centra los enlaces */
-    margin-top: 10px; /* Espacio superior entre el título y los enlaces */
-    flex-wrap: wrap; /* Permite que los enlaces se ajusten en múltiples líneas */
 }
 
 nav ul li {
-    margin: 0 15px; /* Espaciado horizontal entre los enlaces */
+    margin: 0 15px; /* Espaciado entre los elementos */
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 25px; /* Aumenta el tamaño de la fuente */
-    padding: 15px 30px; /* Mayor espaciado */
-    border-radius: 5px; /* Esquinas redondeadas para los botones */
-    transition: background-color 0.3s, transform 0.3s; /* Transición suave para el hover */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para relieve */
-    font-weight: bold; /* Aumenta el grosor de la fuente de los enlaces */
+    color: white; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    padding: 10px 15px; /* Espaciado dentro del botón */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición suave */
 }
 
 nav ul li a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Cambia el color de fondo al pasar el ratón */
-    transform: translateY(-2px); /* Efecto de elevación */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Efecto de sombra al pasar el ratón */
+    background-color: #555; /* Color al pasar el ratón */
 }
 
 /* Productos */
@@ -98,9 +84,10 @@ nav ul li a:hover {
 
 /* Grid de productos */
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adaptable a diferentes tamaños */
-    gap: 20px;
+    display: flex; /* Usar flexbox para disposición horizontal */
+    justify-content: center; /* Centrar productos en la página */
+    flex-wrap: wrap; /* Permitir que los productos se envuelvan si no hay suficiente espacio */
+    gap: 20px; /* Espacio entre los productos */
 }
 
 .producto {
@@ -109,7 +96,8 @@ nav ul li a:hover {
     padding: 20px;
     text-align: center;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    min-height: 250px; /* Añadido para consistencia de tamaño */
+    flex: 1 1 200px; /* Tamaño mínimo de 200px, se ajustará a más si hay espacio */
+    max-width: 300px; /* Ancho máximo para los productos */
 }
 
 .producto img {
@@ -146,6 +134,20 @@ footer {
 
 /* Media Queries para Responsividad */
 @media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Cambiar a disposición vertical en pantallas pequeñas */
+        align-items: center; /* Centrar los elementos */
+    }
+
+    nav ul {
+        flex-direction: column; /* Alinear los enlaces verticalmente */
+        margin-top: 10px; /* Espacio superior para los enlaces */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Espaciado vertical entre los enlaces */
+    }
+
     nav h1 {
         font-size: 24px; /* Tamaño más pequeño en pantallas pequeñas */
     }
@@ -167,6 +169,12 @@ footer {
     nav h1 {
         font-size: 20px; /* Tamaño aún más pequeño */
     }
+
+    nav ul li a {
+        font-size: 18px; /* Tamaño más pequeño en pantallas muy pequeñas */
+    }
+}
+
 
     nav ul li a {
         font-size: 18px; /* Tamaño más pequeño en pantallas muy pequeñas */
